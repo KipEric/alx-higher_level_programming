@@ -3,11 +3,11 @@ const request = require('request');
 
 const movieID = process.argv[2];
 
-const starWars = https://swapi-api.alx-tools.com/api/films/${movieID}/';
+const starWars = 'https://swapi-api.alx-tools.com/api/films/${movieID}/';
 
 request(starWars, function (error, response, body) {
 	if (error){
-		console.log(error);
+		console.error(error);
 	} else {
 		const movie = JSON.parse(body);
 		console.log(movie.title);
